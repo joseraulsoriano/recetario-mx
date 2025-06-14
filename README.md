@@ -63,6 +63,23 @@ recetario-mx/
 ├── scripts/         # Scripts de utilidad
 └── ...
 ```
+## UX
+<img width="1470" alt="Captura de pantalla 2025-06-13 a la(s) 22 50 25" src="https://github.com/user-attachments/assets/86ef6746-72a6-4855-85e0-6ec80cd1de93" />
+
+<img width="1470" alt="Captura de pantalla 2025-06-13 a la(s) 22 50 54" src="https://github.com/user-attachments/assets/dbcd8ff1-e448-44fa-8402-b7c0bd83fc99" />
+
+<img width="1470" alt="Captura de pantalla 2025-06-13 a la(s) 22 51 31" src="https://github.com/user-attachments/assets/64964b14-633a-4786-83c7-d3fb8449b7dd" />
+<img width="1470" alt="Captura de pantalla 2025-06-13 a la(s) 22 52 17" src="https://github.com/user-attachments/assets/4ceca9d3-f81d-4c51-ab8b-7cd4d94af4d0" />
+<img width="1470" alt="Captura de pantalla 2025-06-13 a la(s) 22 52 31" src="https://github.com/user-attachments/assets/d490ba37-34b7-402f-b5e3-742800b7fdd0" />
+<img width="1470" alt="Captura de pantalla 2025-06-13 a la(s) 22 53 27" src="https://github.com/user-attachments/assets/da75875d-75ef-4c8a-84a4-2fe3f8d58309" />
+<img width="1470" alt="Captura de pantalla 2025-06-13 a la(s) 22 54 07" src="https://github.com/user-attachments/assets/0918b19c-01a1-4399-ab9e-df156480a84c" />
+<img width="1470" alt="Captura de pantalla 2025-06-13 a la(s) 22 54 50" src="https://github.com/user-attachments/assets/379acaa3-96ca-48e3-b37d-5b4bd3c856ef" />
+
+<img width="1470" alt="Captura de pantalla 2025-06-13 a la(s) 22 56 25" src="https://github.com/user-attachments/assets/14d904ff-2336-4e93-8ede-d05fd69db6b6" />
+<img width="1470" alt="Captura de pantalla 2025-06-13 a la(s) 22 56 40" src="https://github.com/user-attachments/assets/7635e12c-d390-4103-ac50-f501d3dedd45" />
+
+<img width="1470" alt="Captura de pantalla 2025-06-13 a la(s) 22 56 51" src="https://github.com/user-attachments/assets/96e8d3a9-9621-4db7-8332-054795171c47" />
+
 
 ## Contribuir 🤝
 
