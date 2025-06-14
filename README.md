@@ -1,24 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Recetario MX 🍳
 
-## Getting Started
+Recetario MX es una aplicación web moderna para compartir y descubrir recetas tradicionales mexicanas. Desarrollada con tecnologías modernas, esta plataforma permite a los usuarios explorar, compartir y guardar sus recetas favoritas de la gastronomía mexicana.
 
-First, run the development server:
+## Características Principales 🌟
 
+- 📱 Interfaz moderna y responsive
+- 🔍 Búsqueda y filtrado de recetas
+- 📍 Integración con mapas para ubicar ingredientes y restaurantes
+- 📝 Sistema de recetas paso a paso
+- 🖼️ Soporte para imágenes de alta calidad
+- 🔐 Autenticación de usuarios
+
+## Tecnologías Utilizadas 🛠️
+
+- [Next.js](https://nextjs.org/) - Framework de React para aplicaciones web
+- [TypeScript](https://www.typescriptlang.org/) - Superset tipado de JavaScript
+- [Prisma](https://www.prisma.io/) - ORM moderno para base de datos
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utility-first
+- [Google Maps API](https://developers.google.com/maps) - Integración de mapas
+
+## Requisitos Previos 📋
+
+- Node.js 18.x o superior
+- npm o yarn
+- Base de datos PostgreSQL
+
+## Instalación 🚀
+
+1. Clona el repositorio:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/tu-usuario/recetario-mx.git
+cd recetario-mx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias:
+```bash
+npm install
+# o
+yarn install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Configura las variables de entorno:
+   - Crea un archivo `.env` basado en `.env.example`
+   - Añade las variables necesarias (API keys, etc.)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Inicia el servidor de desarrollo:
+```bash
+npm run dev
+# o
+yarn dev
+```
+
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
+
+## Estructura del Proyecto 📁
+
+```
+recetario-mx/
+├── src/              # Código fuente principal
+├── prisma/          # Esquemas y migraciones de la base de datos
+├── public/          # Archivos estáticos
+├── scripts/         # Scripts de utilidad
+└── ...
+```
+
+## Contribuir 🤝
+
+Las contribuciones son bienvenidas. Por favor, lee nuestras guías de contribución antes de enviar un pull request.
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ## Learn More
 

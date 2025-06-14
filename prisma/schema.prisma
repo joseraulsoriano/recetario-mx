@@ -1,0 +1,121 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  password      String
+  budget        Float     @default(0)
+  income        Float     @default(0)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  ingredients   Ingredient[]
+  recipes       Recipe[]
+  mealPlans     MealPlan[]
+  tickets       Ticket[]
+}
+
+model Ingredient {
+  id            String    @id @default(cuid())
+  name          String
+  quantity      Float
+  unit          String
+  price         Float?
+  store         String?
+  storeUrl      String?
+  category      String    // CEREALES, TUBERCULOS, LEGUMINOSAS, PROTEINAS, VERDURAS
+  nutritionalInfo String?   // Información nutricional en formato JSON (almacenado como string)
+  expiryDate    DateTime?
+  userId        String
+  user          User      @relation(fields: [userId], references: [id])
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  recipeIngredients RecipeIngredient[]
+  imagePath     String?   // Ruta de la imagen del producto
+  description   String?   // Descripción del producto
+  productUrl    String?   // Link al producto en tienda
+
+  @@unique([userId, name])
+}
+
+model Recipe {
+  id          String    @id @default(cuid())
+  name        String
+  description String
+  instructions String
+  prepTime    Int       // en minutos
+  cookTime    Int       // en minutos
+  servings    Int
+  difficulty  String    // fácil, medio, difícil
+  cost        Float     // costo estimado por porción
+  userId      String
+  user        User      @relation(fields: [userId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  ingredients RecipeIngredient[]
+  mealPlans   MealPlan[]
+}
+
+model RecipeIngredient {
+  id          String    @id @default(cuid())
+  recipeId    String
+  ingredientId String
+  quantity    Float
+  unit        String
+  recipe      Recipe    @relation(fields: [recipeId], references: [id])
+  ingredient  Ingredient @relation(fields: [ingredientId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model MealPlan {
+  id          String    @id @default(cuid())
+  userId      String
+  recipeId    String
+  date        DateTime
+  mealType    String    // desayuno, comida, cena, snack
+  user        User      @relation(fields: [userId], references: [id])
+  recipe      Recipe    @relation(fields: [recipeId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Ticket {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  imagePath   String   // Ruta del archivo del ticket
+  total       Float?   // Total extraído del ticket
+  date        DateTime? // Fecha de compra
+  createdAt   DateTime @default(now())
+  ocrText     String?  // Texto extraído por OCR
+  isManual    Boolean  @default(false) // Indica si es un gasto manual
+  description String?  // Descripción del gasto manual
+}
+
+model Store {
+  id          String   @id @default(cuid())
+  name        String   // Nombre de la tienda (Walmart, Soriana, Chedraui, etc.)
+  chain       String   // Cadena de supermercados
+  address     String   // Dirección completa
+  latitude    Float    // Latitud para el mapa
+  longitude   Float    // Longitud para el mapa
+  phone       String?  // Teléfono de la tienda
+  hours       String?  // Horarios de operación
+  rating      Float?   // Calificación de la tienda
+  isActive    Boolean  @default(true) // Si la tienda está activa
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([name, address])
+} 
